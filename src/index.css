@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --maternal-pink: #FFE5EC;
+    --maternal-rose: #FFB3C6;
+    --maternal-lavender: #E5DEFF;
+    --maternal-teal: #A8E6CF;
+    --maternal-peach: #FFD4A3;
+  }
+
+  * {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply antialiased bg-gradient-to-br from-pink-50 via-rose-50 to-pink-100;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-pink-500 via-rose-400 to-purple-400 bg-clip-text text-transparent;
+  }
+
+  .hover-lift {
+    @apply transition-transform duration-300 hover:-translate-y-2;
+  }
+
+  .card-shadow {
+    @apply shadow-lg hover:shadow-2xl transition-shadow duration-300;
+  }
+}
